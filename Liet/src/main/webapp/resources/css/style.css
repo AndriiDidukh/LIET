@@ -1,0 +1,202 @@
+body {
+	padding-top: 51px;
+	background: linear-gradient(to bottom, rgba(173, 173, 173, 1) 0%,
+		rgba(148, 148, 148, 1) 100%);
+}
+
+.container .row {
+	background: white;
+}
+
+.col-md-9 {
+	box-shadow: 2px 2px 4px green;
+}
+
+.col-md-3 {
+	padding-top: 20px;
+}
+
+.date{
+	text-align: right;
+	color: silver;
+}
+
+.text {
+	font-family: Arial, sans-serif;
+	line-height: 1, 5;
+	font-size: 16pt;
+	text-align: justify;
+	color: #101307;
+	padding: 20px;
+}
+
+h1 {
+	text-align: center;
+	text-shadow: 1px -1px 1px black;
+	background: #839933;
+	border-radius: 10px;
+}
+
+h2 {
+	text-align: center;
+	text-shadow: 1px -1px 1px black;
+	background: #abc44d;
+	border-radius: 10px;
+}
+
+.name {
+	padding-top: 2px;
+}
+
+.alignCenter {
+	text-align: center;
+}
+
+.news {
+	pading-left: 20px !important;
+	color: green;
+}
+
+.link {
+	color: #101307 !important;
+	text-align: center;
+}
+
+.frame {
+	text-align: center;
+	box-shadow: 0 0 0 1px #93ac39;
+	border-radius: 7px;
+	margin-top: 15px !important;
+}
+
+.static {
+	height: 180px;
+	width: 100%;
+	overflow: hidden;
+}
+
+.borderRight {
+	box-shadow: -5px 0 5px -5px green;
+}
+
+.border {
+	box-shadow: 0 0 0 2px green;
+	margin-bottom: 2px;
+	margin-top: 2px;
+}
+
+.filling{
+	background: #abc44d !important;
+}
+
+.borderWhite{
+	box-shadow: 0 0 0 2px green !important;
+	margin-top:2px;
+	margin-bottom:10px;
+}
+
+.picture {
+	width: 40%;
+	margin: 7px 7px 7px 0;
+	float: left !important;
+}
+
+.picture2 {
+	width: 15%;
+	margin: 7px 7px 7px 0;
+	float: left;
+}
+
+.picture3 {
+	width: 50%;
+	float: left;
+}
+
+.p4{
+	width:40%;
+	float: right;
+}
+
+.navig {
+	list-style: none;
+	margin: 30px;
+	opacity: .5;
+	padding: 0;
+	width: 50px;
+	-moz-transition: opacity .3s ease-in-out;
+	-webkit-transition: opacity .3s ease-in-out;
+	-o-transition: opacity .3s ease-in-out;
+	transition: opacity .3s ease-in-out;
+}
+
+.navig:hover {
+	opacity: 1;
+}
+
+.navig li {
+	height: 50px;
+	overflow: hidden;
+	width: 290px;
+	-moz-transition: width .2s ease-in-out, height .2s ease-in-out .2s;
+	-webkit-transition: width .2s ease-in-out, height .2s ease-in-out .2s;
+	-o-transition: width .2s ease-in-out, height .2s ease-in-out .2s;
+	transition: width .2s ease-in-out, height .2s ease-in-out .2s;
+}
+
+.navig li:hover {
+	height: 175px;
+	width: 600px;
+}
+
+.navig li a {
+	background: #bbb;
+	color: black;
+	cursor: pointer;
+	display: block;
+	height: 40px;
+	line-height: 40px;
+	margin: 1px;
+	padding-left: 15px;
+	width: 600px;
+	text-decoration: none;
+	-moz-transition: background .2s ease-in-out;
+	-webkit-transition: background .2s ease-in-out;
+	-o-transition: background .2s ease-in-out;
+	transition: background .2s ease-in-out;
+}
+
+.navig li a:hover {
+	background: #2fc5ff;
+	color: white;
+}
+
+.navig li a:first-child {
+	font-size: 1.1em;
+	height: 50px;
+	line-height: 50px;
+	position: relative;
+	text-indent: 36px;
+}
+
+.navig li a:first-child::before {
+	content: '';
+	display: block;
+	height: 32px;
+	left: 9px;
+	position: absolute;
+	top: 9px;
+	width: 32px;
+}
+
+.down {
+	color: #888;
+	text-transform: none;
+	text-decoration: none;
+	position: absolute;
+	top: 30px;
+	left: 500px;
+}
+
+.down:hover {
+	color: #333;
+}
