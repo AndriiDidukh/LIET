@@ -30,7 +30,7 @@
 				</p>
 				<p>
 					<a href="/resources/documents/6.xlsx"><img src="/resources/image/downloads-icon.png" width="30px">Скачати
-						Розклад БЕФ 2017-2018 1 семестр</a>
+						Розклад БЕФ 2017-2018 2 семестр</a>
 				</p>
 			</div>
 		</div>

@@ -13,6 +13,7 @@
 					</h3>
 					<p>${ev.text}</p>
 				</div>
+				<div class="date"><sub>${ev.date}</sub></div>
 			</c:forEach>
 			</div>
 		</div>

@@ -12,4 +12,8 @@ public interface InternshipService {
 
 	Internship findOne(int id);
 
+	void delete(int id);
+
+	List<Internship> findSorted();
+
 }

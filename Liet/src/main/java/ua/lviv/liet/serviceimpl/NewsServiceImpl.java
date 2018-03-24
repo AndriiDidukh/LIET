@@ -25,7 +25,7 @@ public class NewsServiceImpl implements NewsService {
 	public void saveNews(News form) {
 		News news = new News();
 		news.setHeader(form.getHeader());
-		news.setText(form.getText());
+		news.setText(form.getText().replaceAll("\n", "<br>"));
 		news.setDate(new Date());
 		newsRepository.save(news);
 	}
@@ -42,7 +42,7 @@ public class NewsServiceImpl implements NewsService {
 
 	@Override
 	public List<News> find10News() {
-		List<News> news = newsRepository.findByOwners();
+		List<News> news = newsRepository.findSortedNews();
 		List<News> news2 = new ArrayList<News>();
 		for (int i = 0; i < 10; i++) {
 			try {
@@ -56,7 +56,12 @@ public class NewsServiceImpl implements NewsService {
 
 	@Override
 	public List<News> findNews() {
-		return newsRepository.findByOwners();
+		return newsRepository.findSortedNews();
+	}
+
+	@Override
+	public void delete(int id) {
+		newsRepository.delete(id);
 	}
 
 }

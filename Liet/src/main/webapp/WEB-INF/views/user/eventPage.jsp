@@ -10,6 +10,7 @@
 						<p>${event.text}</p>
 						<c:forEach items="${pictures}" var="pc">
 							<img src="/images/event/${pc.id}${pc.path}?version=${pc.version}" width="60%">
+<%-- 							<a href="/images/event/${pc.id}${pc.path}?version=${pc.version}">asdasda sd adsa </a> --%>
 						</c:forEach>
 					</div>
 				</div>

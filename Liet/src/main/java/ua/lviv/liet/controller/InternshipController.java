@@ -32,7 +32,7 @@ public class InternshipController {
 
 	@RequestMapping("/admin/studentsReports")
 	public String showAdminInternship(Model model) {
-		model.addAttribute("reports", internshipService.findAll());
+		model.addAttribute("reports", internshipService.findSorted());
 		return "admin-studentsReports";
 	}
 
@@ -44,7 +44,7 @@ public class InternshipController {
 
 	@RequestMapping("/studentsReports")
 	public String showReports(Model model) {
-		model.addAttribute("news", newsService.find10News()).addAttribute("reports", internshipService.findAll());
+		model.addAttribute("news", newsService.find10News()).addAttribute("reports", internshipService.findSorted());
 		return "user-Звіти студентів";
 	}
 
@@ -52,6 +52,12 @@ public class InternshipController {
 	public String showReport(Model model, @PathVariable int id) {
 		model.addAttribute("news", newsService.find10News()).addAttribute("report", internshipService.findOne(id)).addAttribute("pictures", internshipPictureService.findPictures(id));
 		return "user-Звіт студентів";
+	}
+
+	@RequestMapping("/admin/studentsReports/delete/{id}")
+	public String deleteStudentsReports(@PathVariable int id) {
+		internshipService.delete(id);
+		return "redirect:/admin/studentsReports";
 	}
 
 }

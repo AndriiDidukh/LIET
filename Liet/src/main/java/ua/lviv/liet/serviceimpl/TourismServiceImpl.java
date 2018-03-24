@@ -15,19 +15,33 @@ public class TourismServiceImpl implements TourismService {
 	@Autowired
 	TourismRepository tourismRepository;
 
+	@Override
 	public void saveNews(Tourism tourism) {
 		Tourism tourism2 = new Tourism();
 		tourism2.setHeader(tourism.getHeader());
-		tourism2.setText(tourism.getText());
+		tourism2.setText(tourism.getText().replaceAll("\n", "<br>"));
 		tourismRepository.save(tourism2);
 	}
 
+	@Override
 	public List<Tourism> findAll() {
 		return tourismRepository.findAll();
 	}
 
+	@Override
 	public Tourism findOne(int id) {
 		return tourismRepository.findOne(id);
+	}
+
+	@Override
+	public void delete(int id) {
+		tourismRepository.delete(id);
+
+	}
+
+	@Override
+	public List<Tourism> findSortedTourism() {
+		return tourismRepository.findSortedTourism();
 	}
 
 }

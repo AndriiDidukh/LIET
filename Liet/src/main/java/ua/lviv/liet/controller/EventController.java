@@ -31,7 +31,8 @@ public class EventController {
 	}
 
 	@RequestMapping("/admin/event")
-	public String showAdminEvent() {
+	public String showAdminEvent(Model model) {
+		model.addAttribute("events", eventService.findSortedEvent());
 		return "admin-adminEvent";
 	}
 
@@ -44,7 +45,7 @@ public class EventController {
 	@RequestMapping("/events")
 	public String showEvents(Model model) {
 		model.addAttribute("news", newsService.find10News());
-		model.addAttribute("events", eventService.findAll());
+		model.addAttribute("events", eventService.findSortedEvent());
 		return "user-events";
 	}
 
@@ -54,5 +55,11 @@ public class EventController {
 		model.addAttribute("event", eventService.findOne(id));
 		model.addAttribute("pictures", eventPictureService.findPictures(id));
 		return "user-eventPage";
+	}
+
+	@RequestMapping("/admin/event/delete/{id}")
+	public String deleteEvent(@PathVariable int id) {
+		eventService.delete(id);
+		return "redirect:/admin/event";
 	}
 }

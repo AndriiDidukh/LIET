@@ -12,4 +12,8 @@ public interface TourismService {
 
 	Tourism findOne(int id);
 
+	void delete(int id);
+
+	List<Tourism> findSortedTourism();
+
 }

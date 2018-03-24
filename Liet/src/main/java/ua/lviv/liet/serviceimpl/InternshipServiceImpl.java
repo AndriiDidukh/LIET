@@ -19,7 +19,7 @@ public class InternshipServiceImpl implements InternshipService {
 	public void saveIntership(Internship internship) {
 		Internship internship2 = new Internship();
 		internship2.setName(internship.getName());
-		internship2.setText(internship.getText());
+		internship2.setText(internship.getText().replaceAll("\n", "<br>"));
 		internshipRepository.save(internship2);
 	}
 
@@ -31,6 +31,17 @@ public class InternshipServiceImpl implements InternshipService {
 	@Override
 	public Internship findOne(int id) {
 		return internshipRepository.findOne(id);
+	}
+
+	@Override
+	public void delete(int id) {
+		internshipRepository.delete(id);
+
+	}
+
+	@Override
+	public List<Internship> findSorted() {
+		return internshipRepository.findSorted();
 	}
 
 }

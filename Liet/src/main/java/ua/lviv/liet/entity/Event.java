@@ -1,6 +1,7 @@
 package ua.lviv.liet.entity;
 
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -27,8 +28,27 @@ public class Event {
 	@Type(type = "text")
 	private String text;
 
+	@Type(type = "date")
+	private Date date;
+
 	@OneToMany(mappedBy = "event")
 	List<EventPicture> pictures = new ArrayList<>();
+
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
+	}
+
+	public List<EventPicture> getPictures() {
+		return pictures;
+	}
+
+	public void setPictures(List<EventPicture> pictures) {
+		this.pictures = pictures;
+	}
 
 	public int getId() {
 		return id;

@@ -31,7 +31,8 @@ public class TourismController {
 	}
 
 	@RequestMapping("/admin/tourism")
-	public String showAdminTourism() {
+	public String showAdminTourism(Model model) {
+		model.addAttribute("tourism", tourismService.findSortedTourism());
 		return "admin-adminTourism";
 	}
 
@@ -44,7 +45,7 @@ public class TourismController {
 	@RequestMapping("/tourism")
 	public String showTourism(Model model) {
 		model.addAttribute("news", newsService.find10News());
-		model.addAttribute("tourism", tourismService.findAll());
+		model.addAttribute("tourism", tourismService.findSortedTourism());
 		return "user-tourism";
 	}
 
@@ -52,6 +53,12 @@ public class TourismController {
 	public String showTourismPage(Model model, @PathVariable int id) {
 		model.addAttribute("news", newsService.find10News()).addAttribute("tourism", tourismService.findOne(id)).addAttribute("pictures", tourismPictureService.findPictures(id));
 		return "user-tourismPage";
+	}
+
+	@RequestMapping("/admin/tourism/delete/{id}")
+	public String deleteTourism(@PathVariable int id) {
+		tourismService.delete(id);
+		return "redirect:/admin/tourism";
 	}
 
 }

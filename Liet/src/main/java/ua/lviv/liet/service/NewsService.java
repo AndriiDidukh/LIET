@@ -16,4 +16,6 @@ public interface NewsService {
 
 	List<News> findNews();
 
+	void delete(int id);
+
 }

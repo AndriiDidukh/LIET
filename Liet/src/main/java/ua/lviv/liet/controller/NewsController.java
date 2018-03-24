@@ -28,7 +28,7 @@ public class NewsController {
 
 	@RequestMapping("/admin/news")
 	public String showAdminNews(Model model) {
-		model.addAttribute("news", newsService.findAll());
+		model.addAttribute("news", newsService.findNews());
 		return "admin-adminNews";
 	}
 
@@ -51,4 +51,11 @@ public class NewsController {
 		model.addAttribute("pictures", newsPictureService.findPictures(id));
 		return "user-newsPage";
 	}
+
+	@RequestMapping("/admin/news/delete/{id}")
+	public String deleteNews(@PathVariable int id) {
+		newsService.delete(id);
+		return "redirect:/admin/news";
+	}
+
 }

@@ -16,7 +16,7 @@ body {
 	padding-top: 20px;
 }
 
-.date{
+.date {
 	text-align: right;
 	color: silver;
 }
@@ -85,14 +85,14 @@ h2 {
 	margin-top: 2px;
 }
 
-.filling{
+.filling {
 	background: #abc44d !important;
 }
 
-.borderWhite{
+.borderWhite {
 	box-shadow: 0 0 0 2px green !important;
-	margin-top:2px;
-	margin-bottom:10px;
+	margin-top: 2px;
+	margin-bottom: 10px;
 }
 
 .picture {
@@ -112,8 +112,8 @@ h2 {
 	float: left;
 }
 
-.p4{
-	width:40%;
+.p4 {
+	width: 40%;
 	float: right;
 }
 

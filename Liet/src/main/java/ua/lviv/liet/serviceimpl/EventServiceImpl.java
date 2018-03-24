@@ -1,5 +1,6 @@
 package ua.lviv.liet.serviceimpl;
 
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +24,8 @@ public class EventServiceImpl implements EventService {
 	public void saveNews(Event event) {
 		Event event2 = new Event();
 		event2.setHeader(event.getHeader());
-		event2.setText(event.getText());
+		event2.setText(event.getText().replaceAll("\n", "<br>"));
+		event2.setDate(new Date());
 		eventRepository.save(event2);
 	}
 
@@ -35,6 +37,17 @@ public class EventServiceImpl implements EventService {
 	@Override
 	public Event findOne(int id) {
 		return eventRepository.findOne(id);
+	}
+
+	@Override
+	public void delete(int id) {
+		eventRepository.delete(id);
+
+	}
+
+	@Override
+	public List<Event> findSortedEvent() {
+		return eventRepository.findSortedEvents();
 	}
 
 }

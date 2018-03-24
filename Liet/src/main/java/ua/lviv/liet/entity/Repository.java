@@ -1,10 +1,14 @@
 package ua.lviv.liet.entity;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 import org.hibernate.annotations.Type;
 
@@ -22,6 +26,8 @@ public class Repository {
 	@Column(name = "text")
 	@Type(type = "text")
 	private String text;
+	@OneToMany(mappedBy = "repository")
+	List<RepositoryPDF> pdfs = new ArrayList<>();
 
 	public int getId() {
 		return id;

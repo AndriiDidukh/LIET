@@ -12,4 +12,8 @@ public interface EventService {
 
 	Event findOne(int id);
 
+	void delete(int id);
+
+	List<Event> findSortedEvent();
+
 }
