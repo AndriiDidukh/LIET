@@ -10,41 +10,43 @@
 </head>
 <body>
 	<div class="container">
-		<h1>Звіти міжнародного стажування</h1>
-		<h5>Додати звіт</h5>
-		<form:form action="/admin/studentsReports" method="post" class="form-inline" modelAttribute="form">
-			<form:hidden path="id" />
-			<div class="form-group">
-				<div>
-					<form:input path="name" class="form-control" placeholder="Заголовок" />
-				</div>
-				<div>
-					<form:textarea path="text" class="form-control" placeholder="Текст" rows="10" cols="100" width="100%" />
-				</div>
-				<button type="submit" class="btn btn-primary">Додати</button>
-				<br> <br>
-			</div>
-		</form:form>
 		<div class="row">
-			<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
-				<h3>
-					<b>Заголовок події</b>
-				</h3>
-			</div>
-			<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-				<h3>
-					<b>Видалити подію</b>
-				</h3>
-			</div>
-		</div>
-		<c:forEach items="${reports}" var="nw">
+			<h1>Звіти міжнародного стажування</h1>
+			<h5>Додати звіт</h5>
+			<form:form action="/admin/studentsReports" method="post" class="form-inline" modelAttribute="form">
+				<form:hidden path="id" />
+				<div class="form-group">
+					<div>
+						<form:input path="name" class="form-control" placeholder="Заголовок" size="80%" />
+					</div>
+					<div>
+						<form:textarea path="text" class="form-control" placeholder="Текст" rows="10" cols="100" width="100%" />
+					</div>
+					<button type="submit" class="btn btn-primary">Додати</button>
+					<br> <br>
+				</div>
+			</form:form>
 			<div class="row">
-				<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">${nw.name}</div>
+				<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+					<h3>
+						<b>Заголовок Звіту Стажування</b>
+					</h3>
+				</div>
 				<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
-					<a href="/admin/event/delete/${nw.id}"><button class="btn btn-primary">Delete</button></a>
+					<h3>
+						<b>Видалити Звіт</b>
+					</h3>
 				</div>
 			</div>
-		</c:forEach>
+			<c:forEach items="${reports}" var="nw">
+				<div class="row">
+					<div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">${nw.name}</div>
+					<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+						<a href="/admin/studentsReports/delete/${nw.id}"><button class="btn btn-primary">Delete</button></a>
+					</div>
+				</div>
+			</c:forEach>
+		</div>
 	</div>
 </body>
 </html>

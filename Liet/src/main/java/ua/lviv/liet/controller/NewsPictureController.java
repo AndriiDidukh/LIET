@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -37,14 +38,19 @@ public class NewsPictureController {
 
 	@RequestMapping(value = "/admin/newsPicture", method = RequestMethod.POST)
 	public String addNews(@ModelAttribute("form") NewsPictureForm newsPicture, Model model) {
-
 		newsPictureService.saveNewsPicture(newsPicture);
 		return "redirect:/admin/newsPicture";
 	}
 
 	@RequestMapping("/admin/newsPicture")
 	public String showAdminNewsPicture(Model model) {
-		model.addAttribute("news", newsService.findAll());
+		model.addAttribute("news", newsService.findAll()).addAttribute("pictures", newsPictureService.findSorted());
 		return "admin-adminNewsPicture";
+	}
+
+	@RequestMapping("/admin/newsPicture/delete/{id}")
+	public String deleteNewsPicture(@PathVariable int id) {
+		newsPictureService.delete(id);
+		return "redirect:/admin/newsPicture";
 	}
 }

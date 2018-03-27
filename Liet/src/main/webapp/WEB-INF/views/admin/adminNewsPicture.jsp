@@ -9,25 +9,55 @@
 </head>
 <body>
 	<div class="container">
-		<h1>Картинки новин</h1>
-		<h5>Додати Картинку в новину</h5>
-		<form:form action="/admin/newsPicture" method="post" class="form-inline" modelAttribute="form" enctype="multipart/form-data">
+		<h1 class="alignCenter">Картинки новин</h1>
+		<h3>Додати Картинку в новину</h3>
+		<form:form action="/admin/newsPicture" method="post" class="form-inline" modelAttribute="form"
+			enctype="multipart/form-data">
 			<form:hidden path="id" />
 			<div class="form-group">
-				<form:select path="news" items="${news}" itemLabel="header"
-							itemValue="id">
-						</form:select><br>
-				<label class="btn btn-default btn-file"> Browse <input type="file" name="file" style="display: none;">
+				<label class="btn btn-default btn-file"> Завантажити картинку <input type="file" name="file"
+					style="display: none;">
 				</label><br>
+				<h3>Виберіть новину для картинки</h3>
+				<form:select path="news" items="${news}" itemLabel="header" itemValue="id">
+				</form:select>
+				<br> <br>
+
 				<button type="submit" class="btn btn-primary">Додати</button>
 				<br> <br>
 			</div>
 		</form:form>
+		<div class="row">
+			<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+				<h3>
+					<b>Картинка</b>
+				</h3>
+			</div>
+			<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+				<h3>
+					<b>Заголовок новини якій належить картинка</b>
+				</h3>
+			</div>
 
-<%-- 		<c:forEach items="${news}" var="groupe"> --%>
-<%-- 			<div>${groupe.header}</div> --%>
-<%-- 			<div>${groupe.text}</div> --%>
-<%-- 		</c:forEach> --%>
+			<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+				<h3>
+					<b>Видалити картинку</b>
+				</h3>
+			</div>
+		</div>
+		<c:forEach items="${pictures}" var="pc">
+			<div class="row">
+				<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+					<img src="/images/news/${pc.id}${pc.path}?version=${pc.version}" width="70%">
+				</div>
+				<div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+					<h2>${pc.news.header}</h2>
+				</div>
+				<div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+					<a href="/admin/newsPicture/delete/${pc.id}"><button class="btn btn-primary">Delete</button></a>
+				</div>
+			</div>
+		</c:forEach>
 	</div>
 </body>
 </html>

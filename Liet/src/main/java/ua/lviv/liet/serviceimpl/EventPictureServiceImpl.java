@@ -42,4 +42,15 @@ public class EventPictureServiceImpl implements EventPictureService {
 		return eventPictureRepository.findPictures(id);
 	}
 
+	@Override
+	public void delete(int id) {
+		eventPictureRepository.delete(id);
+
+	}
+
+	@Override
+	public List<EventPicture> findSorted() {
+		return eventPictureRepository.findSorted();
+	}
+
 }

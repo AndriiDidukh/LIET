@@ -11,4 +11,8 @@ public interface EventPictureService {
 
 	List<EventPicture> findPictures(int id);
 
+	void delete(int id);
+
+	List<EventPicture> findSorted();
+
 }

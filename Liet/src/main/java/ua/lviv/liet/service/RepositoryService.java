@@ -12,4 +12,8 @@ public interface RepositoryService {
 
 	List<Repository> findAll();
 
+	List<Repository> findSorted();
+
+	void delete(int id);
+
 }

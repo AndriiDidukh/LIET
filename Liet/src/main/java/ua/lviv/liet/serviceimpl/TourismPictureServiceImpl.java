@@ -41,4 +41,14 @@ public class TourismPictureServiceImpl implements TourismPictureService {
 		return tourismPictureRepository.findPictures(id);
 	}
 
+	@Override
+	public List<TourismPicture> findSorted() {
+		return tourismPictureRepository.findSorted();
+	}
+
+	@Override
+	public void delete(int id) {
+		tourismPictureRepository.delete(id);
+	}
+
 }

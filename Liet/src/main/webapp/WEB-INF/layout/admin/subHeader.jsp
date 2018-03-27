@@ -6,15 +6,13 @@
 			<div class="container-fluid">
 				<div class="collapse navbar-collapse">
 					<ul class="nav navbar-nav">
-						<li><a href="/admin/event">Події</a><br>
-						<a href="/admin/eventPicture">Картинки Подій</a></li>
-						<li><a href="/admin/news">Новини</a><br>
-						<a href="/admin/newsPicture">Картинки Новин</a></li>
-						<li><a href="/admin/tourism">Туризм</a><br>
-						<a href="/admin/tourismPicture">Картинки Туризму</a></li>
-						<li><a href="/admin/studentsReports">Міжнародне стажування</a><br>
-						<a href="/admin/internshipPicture">Картинки Стажування</a><br></li>
-						<li><a href="/admin/repository">Репозиторій</a></li>
+						<li><a href="/admin/event">Події</a><a href="/admin/eventPicture">Картинки Подій</a></li>
+						<li><a href="/admin/news">Новини</a> <a href="/admin/newsPicture">Картинки Новин</a></li>
+						<li><a href="/admin/tourism">Туризм</a> <a href="/admin/tourismPicture">Картинки Туризму</a></li>
+						<li><a href="/admin/studentsReports">Міжнародне стажування</a> <a href="/admin/internshipPicture">Картинки
+								Стажування</a></li>
+						<li><a href="/admin/repository">Репозиторій</a> <a href="/admin/repositoryPDF">Документи
+								Репозиторія</a></li>
 						<li><a href="/">На Головну</a></li>
 					</ul>
 				</div>

@@ -42,4 +42,14 @@ public class NewsPictureServiceImpl implements NewsPictureService {
 		return newsPictureRepository.findPictures(id);
 	}
 
+	@Override
+	public List<NewsPicture> findSorted() {
+		return newsPictureRepository.findSorted();
+	}
+
+	@Override
+	public void delete(int id) {
+		newsPictureRepository.delete(id);
+	}
+
 }

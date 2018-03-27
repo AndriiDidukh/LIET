@@ -6,6 +6,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -42,7 +43,13 @@ public class TourismPictureController {
 
 	@RequestMapping("/admin/tourismPicture")
 	public String showAdminEventPicture(Model model) {
-		model.addAttribute("tourisms", tourismService.findAll());
+		model.addAttribute("tourisms", tourismService.findAll()).addAttribute("pictures", tourismPictureService.findSorted());
 		return "admin-adminTourismPicture";
+	}
+
+	@RequestMapping("/admin/tourismPicture/delete/{id}")
+	public String deleteNewsPicture(@PathVariable int id) {
+		tourismPictureService.delete(id);
+		return "redirect:/admin/tourismPicture";
 	}
 }

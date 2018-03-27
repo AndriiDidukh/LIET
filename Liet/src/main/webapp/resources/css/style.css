@@ -12,6 +12,10 @@ body {
 	box-shadow: 2px 2px 4px green;
 }
 
+.alignCenter{
+	text-align: center;
+}
+
 .col-md-3 {
 	padding-top: 20px;
 }

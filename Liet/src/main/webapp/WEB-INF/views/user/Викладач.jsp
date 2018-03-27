@@ -6,6 +6,12 @@
 			<div class="text">
 				<h2>${person.name}</h2>
 				<p>${person.text}</p>
+				<c:forEach items="${pdfs}" var="pdf">
+					<p>
+						<a href="/images/repository/${pdf.id}${pdf.path}?version=${pdf.version}"><img
+							src="/resources/image/pdf-icon.png" width="30px">${pdf.name}</a>
+					</p>
+				</c:forEach>
 			</div>
 		</div>
 		<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">

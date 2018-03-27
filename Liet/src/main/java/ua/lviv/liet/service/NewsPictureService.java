@@ -11,4 +11,8 @@ public interface NewsPictureService {
 
 	List<NewsPicture> findPictures(int id);
 
+	List<NewsPicture> findSorted();
+
+	void delete(int id);
+
 }

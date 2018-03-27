@@ -28,7 +28,7 @@ public class NewsController {
 
 	@RequestMapping("/admin/news")
 	public String showAdminNews(Model model) {
-		model.addAttribute("news", newsService.findNews());
+		model.addAttribute("news", newsService.findAll());
 		return "admin-adminNews";
 	}
 

@@ -13,4 +13,7 @@ public interface EventPictureRepository extends JpaRepository<EventPicture, Inte
 
 	@Query("SELECT np FROM EventPicture np WHERE np.event.id=:id")
 	List<EventPicture> findPictures(@Param("id") int id);
+
+	@Query("SELECT pc FROM EventPicture pc ORDER BY pc.event DESC")
+	List<EventPicture> findSorted();
 }

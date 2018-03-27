@@ -11,4 +11,8 @@ public interface TourismPictureService {
 
 	List<TourismPicture> findPictures(int id);
 
+	List<TourismPicture> findSorted();
+
+	void delete(int id);
+
 }

@@ -14,4 +14,7 @@ public interface TourismPictureRepository extends JpaRepository<TourismPicture, 
 	@Query("SELECT np FROM TourismPicture np WHERE np.tourism.id=:id")
 	List<TourismPicture> findPictures(@Param("id") int id);
 
+	@Query("SELECT pc FROM TourismPicture pc ORDER BY pc.tourism DESC")
+	List<TourismPicture> findSorted();
+
 }

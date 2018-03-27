@@ -15,7 +15,7 @@
 			<form:hidden path="id" />
 			<div class="form-group">
 				<div>
-					<form:input path="header" class="form-control" placeholder="Заголовок" />
+					<form:input path="header" class="form-control" placeholder="Заголовок" size="80%"/>
 				</div>
 				<div>
 					<form:textarea path="text" class="form-control" placeholder="Текст" rows="10" cols="100" width="100%" />

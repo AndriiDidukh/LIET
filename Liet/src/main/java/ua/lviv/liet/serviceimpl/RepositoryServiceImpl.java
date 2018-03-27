@@ -19,7 +19,7 @@ public class RepositoryServiceImpl implements RepositoryService {
 	public void saveRepository(Repository repository) {
 		Repository rep = new Repository();
 		rep.setName(repository.getName());
-		rep.setText(repository.getText());
+		rep.setText(repository.getText().replaceAll("\n", "<br>"));
 		repositoryRepository.save(rep);
 	}
 
@@ -31,6 +31,17 @@ public class RepositoryServiceImpl implements RepositoryService {
 	@Override
 	public List<Repository> findAll() {
 		return repositoryRepository.findAll();
+	}
+
+	@Override
+	public List<Repository> findSorted() {
+		return repositoryRepository.findSorted();
+	}
+
+	@Override
+	public void delete(int id) {
+		repositoryRepository.delete(id);
+
 	}
 
 }
