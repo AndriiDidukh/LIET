@@ -11,6 +11,12 @@
 		<put-attribute name="footer" value="/WEB-INF/layout/user/footer.jsp" />
 		<put-attribute name="header" value="/WEB-INF/layout/user/header.jsp" />
 	</definition>
+	
+	<definition name="userEng" template="/WEB-INF/layout/userEng/classicEng.jsp">
+		<!-- вказуємо імена атрибутів і файли які туди будуть передані -->
+		<put-attribute name="footer" value="/WEB-INF/layout/userEng/footerEng.jsp" />
+		<put-attribute name="header" value="/WEB-INF/layout/userEng/headerEng.jsp" />
+	</definition>
 	<!-- аналогічно для адміністратора -->
 	<definition name="admin" template="/WEB-INF/layout/admin/classic.jsp">
 		<put-attribute name="header" value="/WEB-INF/layout/user/header.jsp" />

@@ -55,11 +55,20 @@
 					<a href="/resources/documents/37.pdf"><img src="/resources/image/downloads-icon.png" width="30px">Скачати
 						ЗФМТКД зал-екз (зимова) сесія 17-18р_5к (магістри)</a>
 				</p>
-				
+
 				<h3>Бухгалтерсько-економічний Факультет</h3>
 			</div>
 		</div>
 		<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+			<div class="row marginLeft " style="background-color: rgba(0, 0, 0, 0.0);">
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 "></div>
+				<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+					<a href=""> <img src="/resources/image/flag1.png" width="100%"></a>
+				</div>
+				<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+					<a href="/distanceScheduleEng"> <img src="/resources/image/brflag.jpg" width="100%"></a>
+				</div>
+			</div>
 			<h2>Новини</h2>
 			<c:forEach items="${news}" var="groupe">
 				<div class="frame">

@@ -27,37 +27,37 @@ public class PagesController {
 	@RequestMapping("/contacts")
 	public String showContacts(Model model) {
 		model.addAttribute("news", newsService.find10News());
-		return "user-contact";
+		return "user-Контакти";
 	}
 
 	@RequestMapping("/history")
 	public String showHistory(Model model) {
 		model.addAttribute("news", newsService.find10News());
-		return "user-history";
+		return "user-Історія";
 	}
 
 	@RequestMapping("/administration")
 	public String showAdministration(Model model) {
 		model.addAttribute("news", newsService.find10News());
-		return "user-administration";
+		return "user-Адміністрація";
 	}
 
 	@RequestMapping("/faculties")
 	public String showFaculties(Model model) {
 		model.addAttribute("news", newsService.find10News());
-		return "user-faculties";
+		return "user-Факультети";
 	}
 
 	@RequestMapping("/timetable")
 	public String showTimetable(Model model) {
 		model.addAttribute("news", newsService.find10News());
-		return "user-timetable";
+		return "user-Графік";
 	}
 
 	@RequestMapping("/schedule")
 	public String showSchedule(Model model) {
 		model.addAttribute("news", newsService.find10News());
-		return "user-schedule";
+		return "user-Розклад";
 	}
 
 	@RequestMapping("/intership")
@@ -69,7 +69,7 @@ public class PagesController {
 	@RequestMapping("/practiceBase")
 	public String showPracticeBase(Model model) {
 		model.addAttribute("news", newsService.find10News());
-		return "user-practiceBase";
+		return "user-Бази практик";
 	}
 
 	@RequestMapping("/practice")

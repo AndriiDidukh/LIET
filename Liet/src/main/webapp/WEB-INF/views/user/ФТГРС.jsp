@@ -49,13 +49,24 @@
 				<p>Розвинена освітня інфраструктура, інформаційна база, достатній бібліотечний фонд з електронним каталогом,
 					електронними підручниками, навчально-методичним забезпеченням дисциплін, комп’ютерною мережею, доступом до
 					Інтернету сприяють високій якості навчання студентів Львівського інституту економіки і туризму.</p>
-				<p><b>Контактна інформація:</b></p>
+				<p>
+					<b>Контактна інформація:</b>
+				</p>
 				<p>Адреса: м. Львів, вул. Л. Українки, 39</p>
 				<p>тел.: (032) 235-57-72</p>
 				<p>e-mail: parikashdekanat@gmail.com</p>
 			</div>
 		</div>
 		<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+			<div class="row marginLeft " style="background-color: rgba(0, 0, 0, 0.0);">
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 "></div>
+				<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+					<a href=""> <img src="/resources/image/flag1.png" width="100%"></a>
+				</div>
+				<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+					<a href=""> <img src="/resources/image/brflag.jpg" width="100%"></a>
+				</div>
+			</div>
 			<h2>Новини</h2>
 			<c:forEach items="${news}" var="groupe">
 				<div class="frame">
@@ -68,8 +79,3 @@
 		</div>
 	</div>
 </div>
-
-
-
-
-

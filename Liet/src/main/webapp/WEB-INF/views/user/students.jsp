@@ -7,12 +7,20 @@
 				<h2>Рада студентського самоврядування</h2>
 				<p>
 					<i>Голова Ради студентського самоврядування Львівського інституту економіки і туризму - студент факультету
-						туризму, готельної та ресторанної справи Мука Андрій (Т-2012).</i><br>
-					<img src="/resources/image/222.jpg">	
+						туризму, готельної та ресторанної справи Мука Андрій (Т-2012).</i><br> <img src="/resources/image/222.jpg">
 				</p>
 			</div>
 		</div>
 		<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+			<div class="row marginLeft " style="background-color: rgba(0, 0, 0, 0.0);">
+				<div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 "></div>
+				<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+					<a href=""> <img src="/resources/image/flag1.png" width="100%"></a>
+				</div>
+				<div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+					<a href="/studentsEng"> <img src="/resources/image/brflag.jpg" width="100%"></a>
+				</div>
+			</div>
 			<h2>Новини</h2>
 			<c:forEach items="${news}" var="groupe">
 				<div class="frame">
